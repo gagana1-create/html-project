@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-box">
+    <img src="images/vvv.jpg" alt="Logo" class="logo">
+    <h1>Welcome Back</h1>
+    <p class="subtitle">Sign in to your account</p>
+
+    <input type="email" id="email" placeholder="Email Address" class="input-field">
+    <input type="password" id="password" placeholder="Password" class="input-field">
+
+    <button onclick="login()" class="btn-main">Login</button>
+
+    <p id="message" class="message"></p>
+
+    <div style="margin-top:8px; text-align:center;">
+      <button id="autofill" onclick="autofillTest()" style="background:#f0f0f0;border:none;padding:8px 12px;border-radius:6px;cursor:pointer">Fill test creds</button>
+    </div>
+
+    <div class="button-group">
+      <button class="btn btn-admin" onclick="loginAsAdmin()">Admin</button>
+      <button class="btn btn-proctor" onclick="loginAsProctor()">Proctor</button>
+      <button class="btn btn-student" onclick="loginAsStudent()">Student</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('images/bb.jpg') center/cover no-repeat fixed;
+  background-color: #1a1a2e;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  border: 3px solid #4a63e7;
+  box-shadow: 0 4px 15px rgba(74, 99, 231, 0.3);
+}
+
+h1 {
+  color: #1a1a2e;
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4a63e7;
+  box-shadow: 0 0 0 3px rgba(74, 99, 231, 0.1);
+  background: #f8f9ff;
+}
+
+.input-field::placeholder {
+  color: #bbb;
+}
+
+.btn-main {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #4a63e7 0%, #3a52d5 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 99, 231, 0.3);
+}
+
+.btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 99, 231, 0.4);
+}
+
+.btn-main:active {
+  transform: translateY(0);
+}
+
+.message {
+  margin-top: 15px;
+  font-size: 14px;
+  min-height: 20px;
+  font-weight: 500;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.btn-admin {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF5252 100%);
+}
+
+.btn-admin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.btn-proctor {
+  background: linear-gradient(135deg, #4ECDC4 0%, #45B7B0 100%);
+}
+
+.btn-proctor:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.4);
+}
+
+.btn-student {
+  background: linear-gradient(135deg, #45B7D1 0%, #3A9BC0 100%);
+}
+
+.btn-student:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(69, 183, 209, 0.4);
+}
